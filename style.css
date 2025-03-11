@@ -1,0 +1,52 @@
+body{
+    background: radial-gradient(circle, #85858562 10%, transparent 11%);
+    background-size: 1.5em 1.5em;
+    background-color: #e6e6e6;
+    padding: 0;
+    margin: 0;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    overflow: hidden;
+  }
+header{
+    display: flex;
+    background-color: #e6e6e6;
+    border-bottom: solid 1px #7990f5;
+    padding:2rem;
+    position: absolute;
+    z-index: 999;
+    width: 100%;
+}
+#createButton, #resetButton{
+    display: block;
+    height:5rem;
+    width:5rem;
+    margin: auto;
+    background-color: #7990f5;
+    border: none;
+    color: #ffffff;
+    font-size: 2em;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.stickyNote{
+    position:absolute;
+    z-index:0;
+    display:block;
+    background-color:rgb(255, 192, 203);
+    height:10dvw;
+    width:10dvw;
+    cursor:pointer;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.185);
+    text-align: center;
+    font-size: 2em;
+    overflow: hidden;
+  }
+
+  .dragging{
+    background-color:rgb(247, 140, 158);
+  }
+
+  
