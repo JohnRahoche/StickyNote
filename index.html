@@ -1,24 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <script src="https://kit.fontawesome.com/67a5967612.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <script
+      src="https://kit.fontawesome.com/67a5967612.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sticky Notes Online</title>
-</head>
-<body  oncontextmenu="return false">
+  </head>
+  <body oncontextmenu="return false">
     <header id="buttonContainer">
-        <button id="createButton" onClick="createStickyNote()">
-            <i class="fa-solid fa-plus"></i>
-        </button>   
-        <button id="resetButton" onClick="resetArea()">
-            <i class="fa-solid fa-trash"></i>
+      <div>
+        <button
+          id="createButton"
+          class="stickyNoteButtons"
+          onClick="createStickyNote()"
+        >
+          <i class="fa-solid fa-plus"></i>
         </button>
+        <p>Create</p>
+      </div>
+      <div>
+        <button
+          id="editButton"
+          class="stickyNoteButtons"
+          onClick="toggleEdit()"
+        >
+          <i class="fa-solid fa-pen-to-square"></i>
+        </button>
+        <p>Edit</p>
+      </div>
+      <div>
+        <button
+          id="resetButton"
+          class="stickyNoteButtons"
+          onClick="resetArea()"
+        >
+          <i class="fa-solid fa-fire"></i>
+        </button>
+        <p>Reset</p>
+      </div>
     </header>
     <main id="noteArea">
-        
       <script src="script.js"></script>
+      <div id="screenWipe"></div>
     </main>
-</body>
+  </body>
 </html>

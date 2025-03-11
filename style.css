@@ -1,52 +1,93 @@
-body{
-    background: radial-gradient(circle, #85858562 10%, transparent 11%);
-    background-size: 1.5em 1.5em;
-    background-color: #e6e6e6;
-    padding: 0;
-    margin: 0;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    overflow: hidden;
-  }
-header{
-    display: flex;
-    background-color: #e6e6e6;
-    border-bottom: solid 1px #7990f5;
-    padding:2rem;
-    position: absolute;
-    z-index: 999;
-    width: 100%;
+body {
+  background: radial-gradient(circle, #85858562 10%, transparent 11%);
+  background-size: 1.5em 1.5em;
+  background-color: #e6e6e6;
+  padding: 0;
+  margin: 0;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  overflow: hidden;
 }
-#createButton, #resetButton{
-    display: block;
-    height:5rem;
-    width:5rem;
-    margin: auto;
-    background-color: #7990f5;
-    border: none;
-    color: #ffffff;
-    font-size: 2em;
-    border-radius: 50%;
-    cursor: pointer;
+header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #e6e6e6;
+  border-bottom: solid 1px #7990f5;
+  position: absolute;
+  z-index: 2;
+  width: 100%;
 }
-.stickyNote{
-    position:absolute;
-    z-index:0;
-    display:block;
-    background-color:rgb(255, 192, 203);
-    height:10dvw;
-    width:10dvw;
-    cursor:pointer;
-    left: 50%;
-    top:50%;
-    transform: translate(-50%, -50%);
-    box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.185);
-    text-align: center;
-    font-size: 2em;
-    overflow: hidden;
-  }
+header div {
+  padding: 2rem;
+}
+.stickyNoteButtons {
+  display: block;
+  height: 5rem;
+  width: 5rem;
+  margin: auto;
+  border: none;
+  color: #ffffff;
+  font-size: 2em;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: scale 0.2s ease-in-out;
+}
+.stickyNoteButtons:hover {
+  scale: 1.2;
+}
+#resetButton {
+  background-color: #f75b00;
+}
+#createButton {
+  background-color: #3a893a;
+}
+#editButton {
+  background-color: #983fc7;
+}
+#screenWipe {
+  z-index: 1;
+  height: 0;
+  width: 100dvw;
+  background-color: #f75b00;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.selected {
+  background-color: #611889 !important;
+  -webkit-box-shadow: inset 0px 0px 5px #d588ff;
+  -moz-box-shadow: inset 0px 0px 5px #d588ff;
+  box-shadow: inset 0px 0px 5px #d588ff;
+  outline: none;
+  scale: 1.2;
+}
+.stickyNote {
+  position: absolute;
+  z-index: 0;
+  display: block;
+  background-color: rgb(255, 192, 203);
+  height: 10rem;
+  width: 10rem;
+  cursor: pointer;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.185);
+  text-align: center;
+  font-size: 2em;
+  overflow: hidden;
+}
 
-  .dragging{
-    background-color:rgb(247, 140, 158);
+.dragging {
+  background-color: rgb(247, 140, 158);
+}
+@keyframes screenfire {
+  0% {
+    height: 0dvh;
   }
-
-  
+  50% {
+    height: 100dvh;
+  }
+  100% {
+    height: 0dvh;
+  }
+}
