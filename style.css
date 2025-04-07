@@ -18,7 +18,9 @@ header {
 }
 header div {
   padding: 2rem;
+  text-align: center;
 }
+
 .stickyNoteButtons {
   display: block;
   height: 5rem;
@@ -29,10 +31,12 @@ header div {
   font-size: 2em;
   border-radius: 50%;
   cursor: pointer;
-  transition: scale 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  opacity: 0.5;
 }
 .stickyNoteButtons:hover {
   scale: 1.2;
+  opacity: 1;
 }
 #resetButton {
   background-color: #f75b00;
@@ -41,7 +45,7 @@ header div {
   background-color: #3a893a;
 }
 #editButton {
-  background-color: #983fc7;
+  background-color: #973fc7;
 }
 #screenWipe {
   z-index: 1;
@@ -53,11 +57,7 @@ header div {
   left: 0;
 }
 .selected {
-  background-color: #611889 !important;
-  -webkit-box-shadow: inset 0px 0px 5px #d588ff;
-  -moz-box-shadow: inset 0px 0px 5px #d588ff;
-  box-shadow: inset 0px 0px 5px #d588ff;
-  outline: none;
+  opacity: 1 !important;
   scale: 1.2;
 }
 .stickyNote {
